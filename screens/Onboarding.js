@@ -52,7 +52,7 @@ const Onboarding = () => {
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      behavior={Platform.OS === "ios" ? "padding" : null}
       onLayout={onLayoutRootView}
     >
       <View style={styles.header}>
@@ -191,10 +191,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 40,
   },
   welcomeText: {
     fontSize: 40,
-    paddingVertical: 60,
+    paddingVertical: 40,
     fontFamily: "MarkaziText-Medium",
     color: "#495E57",
     textAlign: "center",
